@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Becky's Quest — Endless Seasons</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <h1>🌟 Becky's Quest 🌟</h1>
+      <p class="subtitle">A fun puzzle journey with Becky (Chris' special one 💙) and her friends!</p>
+    </header>
+
+    <main>
+      <!-- INTRO -->
+      <section id="intro" class="card">
+        <div class="becky-intro">
+          <div id="beckyAvatar" class="becky-avatar">💙</div>
+          <div class="intro-text">
+            <h2 id="introTitle">Hey! My name is Becky 💙</h2>
+            <p id="introMessage" class="intro-message"></p>
+          </div>
+        </div>
+
+        <div class="controls">
+          <button id="startBtn" class="btn-primary" aria-disabled="true" title="Wait for Becky to finish talking">▶️ Play with Becky</button>
+          <button id="helpBtn" class="btn-ghost">How to play</button>
+        </div>
+
+        <div id="helpText" class="help" hidden>
+          <p>Answer puzzles, earn points, and make Becky smile. Each season has 30 questions. After that, see your score and move on to the next season. Endless fun awaits!</p>
+        </div>
+      </section>
+
+      <!-- GAME -->
+      <section id="game" class="card" hidden>
+        <div class="top-row">
+          <div class="meta">
+            <div>Season <span id="seasonNum">1</span></div>
+            <div>Level <span id="levelNum">1</span>/30</div>
+          </div>
+          <div class="score">Score: <span id="scoreNum">0</span></div>
+        </div>
+
+        <div id="progressWrap">
+          <div id="progressBar"></div>
+        </div>
+
+        <div id="questionCard" class="question-card">
+          <div id="characterPrompt" class="character-prompt">💙 Becky asks:</div>
+          <h2 id="questionText">Loading...</h2>
+          <div id="options" class="options"></div>
+        </div>
+
+        <div id="feedback" class="feedback" aria-live="polite"></div>
+
+        <div class="controls">
+          <button id="skipBtn" class="btn-ghost">⏭️ Skip</button>
+          <button id="endSeasonBtn" class="btn-danger">End Season</button>
+        </div>
+      </section>
+
+      <!-- SEASON END -->
+      <section id="seasonEnd" class="card" hidden>
+        <h2>🏆 Season Complete!</h2>
+        <p id="seasonResult">You scored 0/30</p>
+        <div class="controls">
+          <button id="nextSeasonBtn" class="btn-primary">➡️ Next Season</button>
+          <button id="restartBtn" class="btn-ghost">Restart Season</button>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>Made by Chrispinus ❤️</p>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
